@@ -1,0 +1,40 @@
+2018-02-08 21:45:46,372 [Worker-6] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache is out-of-date. Trying to update.
+2018-02-08 21:56:13,034 [Worker-4] ERROR o.e.m.c.i.p.r.ProjectRegistryManager - Failed to read Maven project: 1 problem was encountered while building the effective model
+[FATAL] Non-readable POM /Users/dzhang/Desktop/Projects/iotrack/Java-Container/Container/pom.xml: input contained no data @ 
+ for project  at /Users/dzhang/Desktop/Projects/iotrack/Java-Container/Container/pom.xml
+org.apache.maven.project.ProjectBuildingException: 1 problem was encountered while building the effective model
+[FATAL] Non-readable POM /Users/dzhang/Desktop/Projects/iotrack/Java-Container/Container/pom.xml: input contained no data @ 
+ for project  at /Users/dzhang/Desktop/Projects/iotrack/Java-Container/Container/pom.xml
+	at org.apache.maven.project.DefaultProjectBuilder.build(DefaultProjectBuilder.java:168) ~[maven-core-3.3.9.jar:3.3.9]
+	at org.apache.maven.project.DefaultProjectBuilder.build(DefaultProjectBuilder.java:119) ~[maven-core-3.3.9.jar:3.3.9]
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl.readMavenProject(MavenImpl.java:636) ~[org.eclipse.m2e.core_1.8.2.20171007-0217.jar:na]
+	at org.eclipse.m2e.core.internal.project.registry.ProjectRegistryManager$5.call(ProjectRegistryManager.java:816) ~[org.eclipse.m2e.core_1.8.2.20171007-0217.jar:na]
+	at org.eclipse.m2e.core.internal.project.registry.ProjectRegistryManager$5.call(ProjectRegistryManager.java:1) ~[org.eclipse.m2e.core_1.8.2.20171007-0217.jar:na]
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.executeBare(MavenExecutionContext.java:177) ~[org.eclipse.m2e.core_1.8.2.20171007-0217.jar:na]
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:151) ~[org.eclipse.m2e.core_1.8.2.20171007-0217.jar:na]
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:99) ~[org.eclipse.m2e.core_1.8.2.20171007-0217.jar:na]
+	at org.eclipse.m2e.core.internal.project.registry.ProjectRegistryManager.execute(ProjectRegistryManager.java:967) ~[org.eclipse.m2e.core_1.8.2.20171007-0217.jar:na]
+	at org.eclipse.m2e.core.internal.project.registry.ProjectRegistryManager.readProjectWithDependencies(ProjectRegistryManager.java:811) ~[org.eclipse.m2e.core_1.8.2.20171007-0217.jar:na]
+	at org.eclipse.m2e.core.internal.project.registry.ProjectRegistryManager.create(ProjectRegistryManager.java:192) ~[org.eclipse.m2e.core_1.8.2.20171007-0217.jar:na]
+	at org.eclipse.m2e.core.internal.project.registry.MavenProjectManager.create(MavenProjectManager.java:80) [org.eclipse.m2e.core_1.8.2.20171007-0217.jar:na]
+	at org.eclipse.m2e.core.ui.internal.actions.SelectionUtil.getMavenProject(SelectionUtil.java:259) [org.eclipse.m2e.core.ui_1.8.2.20171007-0217.jar:na]
+	at org.eclipse.m2e.editor.pom.MavenPomEditor.readMavenProject(MavenPomEditor.java:742) [org.eclipse.m2e.editor_1.8.2.20171007-0217.jar:na]
+	at org.eclipse.m2e.editor.pom.MavenPomEditor$5.run(MavenPomEditor.java:1077) [org.eclipse.m2e.editor_1.8.2.20171007-0217.jar:na]
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:56) [org.eclipse.core.jobs_3.9.2.v20171030-1027.jar:na]
+Caused by: org.apache.maven.model.building.ModelBuildingException: 1 problem was encountered while building the effective model
+[FATAL] Non-readable POM /Users/dzhang/Desktop/Projects/iotrack/Java-Container/Container/pom.xml: input contained no data @ 
+
+	at org.apache.maven.model.building.DefaultModelProblemCollector.newModelBuildingException(DefaultModelProblemCollector.java:197) ~[maven-model-builder-3.3.9.jar:3.3.9]
+	at org.apache.maven.model.building.DefaultModelBuilder.readModel(DefaultModelBuilder.java:598) ~[maven-model-builder-3.3.9.jar:3.3.9]
+	at org.apache.maven.model.building.DefaultModelBuilder.build(DefaultModelBuilder.java:273) ~[maven-model-builder-3.3.9.jar:3.3.9]
+	at org.apache.maven.project.DefaultProjectBuilder.build(DefaultProjectBuilder.java:161) ~[maven-core-3.3.9.jar:3.3.9]
+	... 15 common frames omitted
+2018-02-08 21:56:21,696 [Worker-9] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded file:///Users/dzhang/Desktop/Projects/iotrack/Java-Container/Container/src/lib/com/iotracks/container-java-sdk/1.1.2/container-java-sdk-1.1.2.pom
+2018-02-08 21:56:21,699 [Worker-9] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for com.iotracks:container-java-sdk:jar:1.1.2 is missing, no dependency information available
+2018-02-08 21:56:21,728 [Worker-9] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for com.iotracks:container-java-sdk:jar:1.1.2 is missing, no dependency information available
+2018-02-08 22:00:34,597 [Worker-1] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for com.iotracks:container-java-sdk:jar:1.1.2 is missing, no dependency information available
+2018-02-08 22:00:34,605 [Worker-1] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for com.iotracks:container-java-sdk:jar:1.1.2 is missing, no dependency information available
+2018-02-08 22:09:31,732 [Worker-5] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2018-02-12 13:12:30,391 [Worker-0] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache is out-of-date. Trying to update.
+2018-02-12 13:59:49,088 [Worker-23] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for com.iotracks:container-java-sdk:jar:1.1.2 is missing, no dependency information available
+2018-02-12 13:59:49,160 [Worker-23] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for com.iotracks:container-java-sdk:jar:1.1.2 is missing, no dependency information available

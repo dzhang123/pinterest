@@ -1,0 +1,10 @@
+{
+  "cloudProvider": {
+    "aws": {
+      "accessKeyId": "",
+      "secretAccessKey": "",
+      "region": "",
+      "deliveryStream": ""
+    }
+  }
+}
