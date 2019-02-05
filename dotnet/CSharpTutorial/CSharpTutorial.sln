@@ -1,0 +1,17 @@
+
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CSharpTutorial", "CSharpTutorial\CSharpTutorial.csproj", "{36881D82-0E9C-4332-BE7F-DA2E01E5B39D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x86 = Debug|x86
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{36881D82-0E9C-4332-BE7F-DA2E01E5B39D}.Debug|x86.ActiveCfg = Debug|x86
+		{36881D82-0E9C-4332-BE7F-DA2E01E5B39D}.Debug|x86.Build.0 = Debug|x86
+		{36881D82-0E9C-4332-BE7F-DA2E01E5B39D}.Release|x86.ActiveCfg = Release|x86
+		{36881D82-0E9C-4332-BE7F-DA2E01E5B39D}.Release|x86.Build.0 = Release|x86
+	EndGlobalSection
+EndGlobal
