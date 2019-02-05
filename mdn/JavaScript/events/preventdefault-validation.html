@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Prevent Default Validation</title>
+        <style>
+            div {
+                margin-bottom: 10px;
+            }
+        </style>
+    </head>
+    <body>
+        <form>
+            <div>
+                <label for="fname">First Name: </label>
+                <input id="fname" type="text"/>
+            </div>
+            <div>
+                <label for="lname">Last Name: </label>
+                <input id="lname" type="text"/>
+            </div>
+            <div>
+                <input id="submit" type="submit"/>
+            </div>
+        </form>
+        <p></p>
+        <script>
+            var form = document.querySelector("form");
+            var fname = document.getElementById("fname");
+            var lname = document.getElementById('lname');
+            var para = document.querySelector('p');
+
+            form.onsubmit = function (e) {
+                if (fname.value === '' || lname.value === '') {
+                    e.preventDefault();
+                    para.textContent = 'You need to fill in both names!';
+                }
+            }
+        </script>
+    </body>
+</html>
