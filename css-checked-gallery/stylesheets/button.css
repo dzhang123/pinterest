@@ -1,0 +1,8 @@
+button.mybutton {
+    visibility: collapse;
+}
+
+input.selector:checked ~ button.mybutton {
+    visibility: visible;
+}
+

@@ -1,0 +1,52 @@
+button.mybutton {
+    background-color: black;
+    position: absolute;
+    top: 15px;
+    left: 50px;
+    visibility: collapse;
+}
+
+input.selector:checked~button.mybutton {
+    background-color: red;
+    visibility: visible;
+}
+
+
+#gallery-container {
+    position: relative;
+    width: 500px;
+    height: auto;
+    padding-top: 350px;
+    padding-bottom: 15px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    border: 1px #aaaaaa solid;
+}
+
+img.gallery-fullsize {
+    position: absolute;
+    top: 15px;
+    left: 50px;
+    display: none;
+}
+
+div.gallery-item {
+    display: inline-block;
+}
+
+input.gallery-selector {
+    display: none;
+}
+
+label.gallery-label {
+    cursor: pointer;
+}
+
+input.gallery-selector:checked~img.gallery-fullsize {
+    display: block;
+    
+}
+
+
+

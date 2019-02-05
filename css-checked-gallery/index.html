@@ -1,0 +1,21 @@
+<html>
+    <head>
+        <style type="text/css">
+            button.mybutton {
+            visibility: collapse;
+            }
+
+            input.selector:checked ~ button.mybutton {
+            visibility: visible;
+            }
+
+        </style>
+
+
+    </head>
+    <body>
+        <button class='mybutton' id='mybutton-id'>hidden button</button>
+        <input type="checkbox" class='selector' id="checkbox-id"/>
+        <label for="checkbox-id">input checkbox</label>
+    </body>
+</html>
