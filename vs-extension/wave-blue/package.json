@@ -1,0 +1,21 @@
+{
+    "name": "wave-blue",
+    "displayName": "Wave Blue",
+    "description": "A dark blue theme.",
+    "version": "0.0.1",
+    "engines": {
+        "vscode": "^1.32.0"
+    },
+    "categories": [
+        "Themes"
+    ],
+    "contributes": {
+        "themes": [
+            {
+                "label": "Wave Blue",
+                "uiTheme": "vs-dark",
+                "path": "./themes/Wave Blue-color-theme.json"
+            }
+        ]
+    }
+}
