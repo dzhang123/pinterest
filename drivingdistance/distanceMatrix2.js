@@ -9,6 +9,7 @@ var destinations = text.split('\r\n');
 //var destinations = ["New York NY", 'Montreal', '41.8337329,-87.7321554'];
  
 var origins = ['32.8423,-104.4033']; // Artisa
+/*
 var _destinations = [
     '33.4110107,-104.3735809',
     '33.407341,-104.3659058',
@@ -222,13 +223,15 @@ var _destinations = [
     '32.0072250,-103.9401703',
     '32.0108566,-103.9399261',
     '32.3760796,-104.2809448'];
+*/
 
-distance.key('nokey');
-//distance.units('imperial'); // default is metric
+distance.key('AIzaSyCI8Vb9fKY-Yx0zMkESIoXrPXWeWvpezro');
+distance.units('imperial'); // default is metric
 //distance.mode('driving'); //default
 
 var total = 0;
 var sum = 0;
+var durations = 0;
 
 if (destinations.length < 25) {
 distance.matrix(origins, destinations, function (err, distances) {
@@ -297,8 +300,12 @@ async function count (limit) {
         })
         .catch((v) => { console.log('failure')});
     }
-    console.log('total driving distance is ' + sum/1000 + ' kilometers or ' + sum/1000/1.5 + ' miles');
-    console.log('and average driving distance is ' + sum/1000/destinations.length + ' kilometers or ' + sum/1000/1.5/destinations.length + ' miles');
+    
+    console.log('\nTotal Driving Distance: ' + sum + ' meters or ' + sum/1000/1.5 + ' miles.');
+    console.log('Estimated minimum total driving time: ' + durations/60/60 + ' hours');
+    console.log('Average Driving Distance: ' + sum/destinations.length + ' meters or ' + sum/1000/1.5/destinations.length + ' miles');
+    console.log('Average minimum travel time: ' + durations/60/60/destinations.length + ' hours\n\n')
+
 }
 
  function distance_matrix_top25(origins, destinations) {
@@ -360,12 +367,15 @@ function distance_sum (distances) {
             var origin = distances.origin_addresses[i];
             var destination = distances.destination_addresses[j];
             if (distances.rows[0].elements[j].status == 'OK') {
-                var distance = distances.rows[i].elements[j].distance.text;
-                
-                //console.log('Distance from ' + origin + ' to ' + destination + ' is ' + distance);
+               var distance = distances.rows[i].elements[j].distance.text;
+                var duration = distances.rows[i].elements[j].duration.text;
+                console.log('Distance from ' + origin + ' to ' + destination + ' is ' + distance + ' and travel time estimate is ' + duration);
 
                 sum += distances.rows[i].elements[j].distance.value;
-                console.log(distances.rows[i].elements[j].distance.value);
+                durations += distances.rows[i].elements[j].duration.value;
+
+                console.log('    ' + distance + ' equals to ' + distances.rows[i].elements[j].distance.value + ' meter, ' 
+                                + duration + ' equals to ' + distances.rows[i].elements[j].duration.value/60/60 + ' hours');
             } else {
                 console.log(destination + ' is not reachable by land from ' + origin);
             }
