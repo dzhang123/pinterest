@@ -1,11 +1,15 @@
 var distance = require('google-distance-matrix');
  
+const fs = require('fs');
+var text = fs.readFileSync('coords.csv', 'utf8');
+var destinations = text.split('\r\n');
+
 //var origins = ['San Francisco CA', '40.7421,-73.9914'];
 //var destinations = ['New York NY', 'Montreal', '41.8337329,-87.7321554', 'Honolulu'];
-//var destinations = ['New York NY', 'Montreal', '41.8337329,-87.7321554'];
+//var destinations = ["New York NY", 'Montreal', '41.8337329,-87.7321554'];
  
 var origins = ['32.8423,-104.4033']; // Artisa
-var destinations = [
+var _destinations = [
     '33.4110107,-104.3735809',
     '33.407341,-104.3659058',
     '33.4057846,-104.3781433',
@@ -222,7 +226,6 @@ var destinations = [
 distance.key('nokey');
 //distance.units('imperial'); // default is metric
 //distance.mode('driving'); //default
-
 
 var total = 0;
 var sum = 0;
