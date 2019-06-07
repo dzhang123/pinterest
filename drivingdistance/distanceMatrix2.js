@@ -219,9 +219,9 @@ var destinations = [
     '32.0108566,-103.9399261',
     '32.3760796,-104.2809448'];
 
-//distance.key('NOKEY');
-//distance.units('imperial');
-//distance.mode('driving');
+distance.key('nokey');
+//distance.units('imperial'); // default is metric
+//distance.mode('driving'); //default
 
 
 var total = 0;
@@ -294,7 +294,8 @@ async function count (limit) {
         })
         .catch((v) => { console.log('failure')});
     }
-    console.log('sum --- ' + sum);
+    console.log('total driving distance is ' + sum/1000 + ' kilometers or ' + sum/1000/1.5 + ' miles');
+    console.log('and average driving distance is ' + sum/1000/destinations.length + ' kilometers or ' + sum/1000/1.5/destinations.length + ' miles');
 }
 
  function distance_matrix_top25(origins, destinations) {
